@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="body">
+    <p></p>
+    <div class="row">
+        <form name="Form" action="customerBackend.php" method="post">
+            <div id="login"><b>Account:</b><br> Username: <input type="email" id="username" name="username" required>
+                <br> Password: <input type="password" id="password" name="password" minlength="8" required><br>
+            </div><br>
+            <div><b></b>Item Quantities:<br></b>
+                Eraser: <input type="number" value="0" id="number" name="eraser" min="0" onchange="cost()" width="25px">
+                <br>Bullet Pen: <input type="number" value="0" id="number" name="bulletPen" min="0" onchange="cost()">
+                <br>Highlighter: <input type="number" value="0" id="number" name="highLighter" min="0" onchange="cost()"><br>
+            </div><br>
+            <div id="shipping"><b>Shipping Time:<br></b>
+                <input type="radio" value="free" name="shipping" checked id="free" required onchange="shipping(); cost()">
+                <label for="free">Free 7 day</label><br>
+                <input type="radio" value="overNight" name="shipping" id="overNight" onchange="shipping(); cost()">
+                <label for="overNight">$20.00 over night</label><br>
+                <input type="radio" value="threeDay" name="shipping" id="threeDay" onchange="shipping(); cost()">
+                <label for="threeDay">$5.00 three days</label><br>
+            </div><br>
+            <button type="submit" onClick="return validateForm()">Checkout</button>
+            <button onClick="reset()">Reset</button><br><br>
+        </form>
+    </div>
+    <script src="formChecker.js"></script>
+</body>
+
+</html>

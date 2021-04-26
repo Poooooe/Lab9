@@ -1,0 +1,18 @@
+#number {
+    width: 3em;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    background-color: HoneyDew;
+}
+
+td {
+    background-color: LavenderBlush;
+}
